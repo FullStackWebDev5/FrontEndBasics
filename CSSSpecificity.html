@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CSS Specificity</title>
+  <link rel="stylesheet" href="CSSSpecificity.css">
+  <style>
+    /* *{
+      padding: 0;
+      margin: 0;
+    } */
+    /* div{
+      background-color: #feb236;
+    } */
+    .div1{
+      background-color: #d64161;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 800;
+      font-size: 24px;
+      font-style: italic; 
+
+      padding: 10px;
+
+      border: 5px solid black;
+      border-radius: 10px;
+    }
+    /*
+    .div2{
+      background-color: #034f84;
+    }
+    div.div1{
+      background-color: green;
+    } */
+
+  </style>
+</head>
+
+<body>
+  <div class='div1'>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, at suscipit veniam pariatur a accusantium
+    ipsa assumenda unde autem. Molestias, illum. Dolorem sequi quia eligendi ad voluptatum veniam hic facilis iure
+    voluptates at necessitatibus saepe maxime in sed officiis sunt, molestias voluptas impedit libero. Nobis modi harum
+    dolor quasi natus.
+  </div>
+  <div class='div2'>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, at suscipit veniam pariatur a accusantium
+    ipsa assumenda unde autem. Molestias, illum. Dolorem sequi quia eligendi ad voluptatum veniam hic facilis iure
+    voluptates at necessitatibus saepe maxime in sed officiis sunt, molestias voluptas impedit libero. Nobis modi harum
+    dolor quasi natus.
+  </div>
+</body>
+
+</html>
+
+<!--
+  CSS Specificty (Priority)
+  1. Class Selectors have more specificty than element/tag selectors
+  2. Inline CSS > Internal CSS > External CSS
+  3. More specific selectors -> Higher Priortity
+  4. Universal Selectors -> Least Priority
+  5. Latest rule will be applied if priortiy is the same.
+
+  1. FONT
+
+
+  Note: * -> Universal Selector
+-->
