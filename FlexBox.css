@@ -1,15 +1,52 @@
 body{
   background-color: #eee;
 }
+
+.container{
+  background-color: #034f84;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+/*
+FLEX DIRECTION: COLUMN
+- justify-content: horizontal
+- align-items: vertical
+FLEX DIRECTION: ROW
+-justify-content: vertical
+- align-items: horizontal
+
+.card1{
+  height: 200px;
+}
+
+/* .card3, .card1{
+  flex-shrink: 1;
+}
+
+.card2{
+  flex-shrink: 1;
+} */
+
+/* .card1, .card2{
+  flex-grow: 1;
+} */
+/*
+.card3{
+  flex-grow: 1;
+} */
+
 .card{
-  height: 380px;
-  width: 300px;
+  width: 250px;
   border: 2px solid black;
   border-radius: 4px;
-  float: left;
   margin: 10px;
   background-color: white;
 }
+
 .card img{
   width: 100%;
   height: 180px;
@@ -56,7 +93,7 @@ body{
   float: left;
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 .buttons button{
   width: 40%;
