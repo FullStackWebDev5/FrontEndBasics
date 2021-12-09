@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CSS Variables</title>
+  <style>
+    /* Gloabal Variable */
+    :root{
+      --standard-font: Times, "Times New Roman";
+      --standard-height: 400px;
+      --width1: 400px;
+    }
+    .div1{
+      /* Local Variable */
+      --standard-background-color: blue;
+      font-family: var(--standard-font);
+      width: var(--width1);
+      height: var(--standard-height);
+      background-color: var(--standard-background-color);
+    }
+    .div2{
+      width: var(--width1);
+      height: var(--standard-height);
+      background-color: var(--standard-background-color);
+    }
+  </style>
+</head>
+<body>
+  <div class='div1'>
+    WEB DEV
+  </div>
+  <div class="div2">
+
+  </div>
+</body>
+</html>

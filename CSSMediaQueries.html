@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries</title>
+  <style>
+    .div1, .div2, .div3{
+      width: 400px;
+      height: 400px;
+      background-color: red;
+      float: left;
+      margin: 2px;
+    }
+    @media screen and (max-width: 768px) { /* (screen-width <= 768) */
+      .div1, .div2, .div3{
+        background-color: blue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="div1">
+
+    </div>
+    <div class="div2">
+
+    </div>
+    <div class="div3">
+
+    </div>
+  </div>
+  
+</body>
+</html>
