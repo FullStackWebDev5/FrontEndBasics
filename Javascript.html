@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+</head>
+
+<body>
+  <h1 id='heading-1'>Welcome All</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto reiciendis, repudiandae odio adipisci eaque
+    reprehenderit quod harum mollitia sequi fugit, ullam iusto laborum consequuntur velit! Impedit molestias rem debitis
+    quos error non, beatae illo ex corporis accusamus illum assumenda nobis consequuntur soluta, eius quibusdam aliquid
+    quis aspernatur facere tempora nulla.</p>
+  <p id='p1'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo iste beatae inventore ratione numquam quos
+    dolore
+    sapiente debitis qui quae?</p>
+  <button onclick='changeContent()'>Click me to change text</button>
+  <!-- 'Function Call' through a Js Event (onclick) -->
+  <br>
+  <br>
+  <img id='image1'
+    src='https://res.cloudinary.com/practicaldev/image/fetch/s--_HBZhuhF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/nweeqf97l2md3tlqkjyt.jpg'
+    height="200" width="200">
+
+  <!-- 1. Including Js Code in the same html file -->
+  <script>
+    // Single Line Comments
+    /*
+     Multi-line Comments
+    */
+    // 1. Select the element from body which has an id of 'p1' - document.getElementById('p1')
+    // 2. Change the html of the element from body which has an id of 'p1' - .innerHTML('<b>We are learning JavaScript</b>')
+
+    // Function Definition
+    function changeContent() {
+      /* Change HTML Content */
+      // document.getElementById('p1').innerHTML = '<b>We are learning JavaScript!!</b>';
+
+      /* Change Text Content */
+      // document.getElementById('p1').innerText = 'We are learning JavaScript!!'
+
+      /* Change Attributes */
+      // document.getElementById('image1').src = 'https://media.istockphoto.com/photos/male-programmer-working-on-new-project-picture-id1274948583?b=1&k=20&m=1274948583&s=170667a&w=0&h=TYb8QHIT9JT1hHmIh9oB5ClUuxenJ51b8OlSbHcXvqA='
+      // document.getElementById('image1').height = '700'
+      // document.getElementById('image1').width = '700'
+
+      /* Change Style */
+      // document.getElementById('image1').style.height = '700px'
+      // document.getElementById('image1').style.width = '700px'
+      document.getElementById('p1').style.backgroundColor = 'red'
+
+      document.getElementById('heading-1').style.cssText = 'font-size: 3em; color: red';
+    }
+  </script>
+  <!-- 2. Importing Js Code in some external html file -->
+  <script src='externaljs.js'></script>
+</body>
+
+</html>
+
+<!--
+  Js is loosely typed language
+  TypeScript - Achieve Js behaviour along with types
+
+  Either in the head tag or in the body tag 
+  NOTE: Use specifically before the body tags ends whenever you are manupilating a specific element swithout any function 
+
+  DOM - Document Object Model
+  
+  Event: Any action performed on the website
+
+  Js Function:
+  1. Function Definition
+  2. Function Call
+
+  JS Event:
+  1. onclick
+-->
