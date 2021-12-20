@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var a // Declaration
+    // console.log('The value of a is ', a) // undefined
+    // console.log('typeof(a)', typeof(a)) // typeof(undefined) = undefined
+
+    // a = 10.23567; // Initialization
+    // console.log('The value of a is ', a) // 10
+    // console.log('typeof(a)', typeof(a)) // typeof(a) = number
+
+    // var a = "Javascript"; // Re-declare a variable which was initially declared using a 'var' keyword
+    // console.log('The value of a is ', a) // "JavaScript"
+    // console.log('typeof(a)', typeof(a)) // typeof(undefined) = string
+
+    // a = false  // Re-Initialization
+    // console.log('The value of a is ', a) // true
+    // console.log('typeof(a)', typeof(a)) // typeof(undefined) = boolean
+
+    // Condition
+    // if (a) { // Condition (true)
+    //   console.log('TRUE') // True part
+    // } else {
+    //   console.log('FALSE') // False part
+    // }
+
+    // Ternary Operator
+    // console.log( a ? 'TRUE' : 'FALSE' ); // Condition ? true part : false part
+
+    /* Boolean
+       1. Numbers:
+       Non Zero Numbers - true
+       Zero - false
+
+       2. Strings:
+       Empty String ('') - false
+       Any string apart from empty string - true
+
+       3. UNDEFINED - false
+       4. NULL - false
+
+       TRUTHY Values: true, 1
+       FALSY Values: false, 0
+
+    */
+
+    // a = -1;
+    // console.log('The value of a is ', a) // -1
+    // console.log('typeof(a)', typeof(a)) // typeof(-1) = number
+
+    // a = null;
+    // console.log('The value of a is ', a) // null
+    // console.log('typeof(a)', typeof(null)) // typeof(null) = object
+    // console.log( a ? 'TRUE' : 'FALSE');
+
+    // a = 'null';
+    // console.log('The value of a is ', a) // 'false'
+    // console.log('typeof(a)', typeof(a)) // typeof(a) = string
+    // console.log( a ? 'TRUE' : 'FALSE');
+
+    /*
+      == : Equality
+      === : Equality and Type
+    */
+    
+    // a = true;
+    a = 0;
+
+    var y = Number('abc5')  // NaN (Not a Number) NaN is a type of Number
+    console.log(typeof(y))
+
+    // 'JavaScript' == true -> false; 2 == true -> false; 1 ==  true -> true; 0 == false -> true
+    // 5 == '5' (Internal typecasting) -> true 
+    // console.log('5' == 5 ? 'TRUE' : 'FALSE'); 
+    console.log(1 === true ? 'TRUE' : 'FALSE'); 
+  </script>
+</head>
+<body>
+  <h1>Learning JavaScript</h1>
+</body>
+</html>
+
+<!-- 
+  Loosely Typed Language - JavaScript 
+  typeof()
+-->
