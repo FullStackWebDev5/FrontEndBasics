@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Var, Let, Const</title>
+</head>
+<body>
+  <script>
+    /*
+    1. Declare     var x
+    2. Initalize   var x = 12
+
+    VAR
+    - Re-declare
+    - Re-initialize (Value will be over-written)
+    - Global Scope (Function Scope)
+
+    LET
+    - Cannot Re-declare (in different blocks {} it is allowed)
+    - Re-initialize
+    - Block Scope
+
+    CONST
+    - Cannot be re-declared
+    - Cannot be re-initalized
+    - Block Scope
+
+    // var x = 'JavaScript'
+    // var x = 'BE'
+    // console.log(x)
+
+    // if(true){
+    //   var x = 'FE'
+    // }
+
+    // console.log(x)
+
+    MAX_DISCOUNT = 25 (STANDARD)
+    IF USER_AGE > 18
+    MAX_DISCOUNT = 30
+    - > 25 - 90*30
+    - < 25 - 80*30
+    */
+
+    // let my_age = 24;
+
+    // let max_discount = 25;
+
+    // if(my_age > 18){
+    //   max_discount = 30
+    //   if(my_age  == 23){
+    //     max_discount = 90 * max_discount
+    //   } else if (my_age == 24){
+    //     max_discount = 80 * max_discount
+    //   }
+    //   console.log('INNER', max_discount)
+    // }
+
+    // console.log('OUTER', max_discount)
+
+    // let x = 50
+    // let x = 49
+    
+    // {
+    //   let x = 12;
+    //   // console.log(x)
+    //   // x = 14;
+    //   console.log(x)
+    // }
+
+    // {
+    //   const pi = 3.14
+    // }
+
+    // console.log(pi)
+
+    {
+      let x = 10;
+      console.log(x)
+    }
+
+    let x = 5
+    console.log(x)
+    
+  </script>
+</body>
+</html>
