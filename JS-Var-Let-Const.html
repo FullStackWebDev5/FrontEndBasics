@@ -76,13 +76,30 @@
 
     // console.log(pi)
 
-    {
-      let x = 10;
-      console.log(x)
-    }
+    // {
+    //   let x = 10;
+    //   console.log(x)
+    // }
 
-    let x = 5
-    console.log(x)
+    // let x = 5
+    // console.log(x)
+
+    // HOISTING  [***imp] (Variable declarations and function definitions are hoisted to the top of the script in Js)
+    // ES6: ECMAScript 6 (> 2015) - let, const 
+
+    // Note for let and const in hoisting: Although variables created using these are hoisted, still those remain the 'TEMPORAL DEAD ZONE'
+    
+    // START ------------
+
+    // console.log(x)
+
+    // let x = 12
+
+    abc()
+    
+    function abc(){
+      console.log('abc')
+    }
     
   </script>
 </body>
