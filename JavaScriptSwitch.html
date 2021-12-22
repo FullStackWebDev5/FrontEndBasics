@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switch Statements</title>
+  <script>
+
+    // DATABASE
+    let admin = 'Pratik'
+
+    let superAdmin = 'Saurabh'
+
+    let teacher = 'Jyoti'
+
+    let principal = 'Haresh'
+
+
+    // INPUT FROM THE BROWSER
+    let currentUser = 'Saurabh'
+
+    // if(currentUser == superAdmin) {
+    //   console.log('SUPER-ADMIN');
+    // } else if(currentUser == teacher) {
+    //   console.log('TEACHER');
+    // } else if(currentUser == principal) {
+    //   console.log('PRINCIPAL');
+    // } else if(currentUser == admin) {
+    //   console.log('ADMIN');
+    // }
+
+    // switch(condition) {
+    //   case 1:
+    //     break
+    //   case 2:
+    //     break
+    //   case 3:
+    //     break
+    //   default:
+    //     break
+    // }
+
+    switch(currentUser) {
+      case superAdmin:
+        console.log('SUPER-ADMIN');
+        break
+      case teacher:
+        console.log('TEACHER');
+        break
+      case principal:
+        console.log('PRINCIPAL');
+        break
+      case admin:
+        console.log('ADMIN');
+        break
+      default:
+        console.log('DEFAULT - STUDENT')
+        break
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -2,7 +2,7 @@
 Operator Types in Js:
 1. Arithmetic Operators: + - * / % ++ -- **
 2. Comparison Operators: == === != !== > >= < <=
-3. Bitwise Operator: &(AND) |(OR) ^(XOR) ~(NOT)
+3. Bitwise Operator: &(AND) |(OR) ^(XOR) ~(NOT) >>(Right Shift) <<(Left Shift)
 4. Logical Operator: &&(AND) ||(OR) !(NOT)
 5. Assignment Operator: = += -= *= /= **=
 */
@@ -38,10 +38,10 @@ Decrement:
 4 - 0100
 
 AND
-0 & 0 = 0
-0 & 1 = 0
-1 & 0 = 0
-1 & 1 = 1
+0 & 0 = 0    false && false = false
+0 & 1 = 0    false && true = false    
+1 & 0 = 0    true && false = false
+1 & 1 = 1    true && true = true
 
 OR
 0 | 0 = 0
@@ -79,9 +79,51 @@ XOR
 
 // console.log(!(5>3) ? 'true' : 'false')
 
-let x = 3
-let y = 6
+// let x = 3
+// let y = 6
 
-x*=y //  x = x * y
+// x*=y //  x = x * y
 
-console.log(x)
+// console.log(x)
+
+// let x = 2        // 0010
+// let z = ~x       // 1101 => 1's COMPLEMENT => 0010 => 0010 + 0001 => 0011 => -3
+
+/*
+
+Decimal: 0-9  0055
+
+Binary: 0/1 
+
+0: 0000
+1: 0001
+2: 0010
+3: 0011
+4: 0100
+5: 0101
+6: 0110
+7: 0111
+8: 1000
+9: 1001
+10: 1010
+11: 1011
+12: 1100
+13: 1101
+14: 1110
+15: 1111
+16: 0001 0000    
+
+8 4 2 1
+1 0 1 1
+*/
+
+
+// let x = 2       // 0010
+
+// let z = x << 2  // 1000
+
+let x = 2  // 0010
+
+let y = 4  // 0100
+
+console.log(x & y) // 0000
