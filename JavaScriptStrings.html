@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Strings</title>
   <script>
-    let a = 'JavaScript + HTML + CSS'
+    // let a = 'JavaScript + HTML + CSS + HTML + HTML'
 
-    console.log(a)
+    // console.log(a)
 
     // let c = 'JavaScript'
     // console.log(a === c)
 
-    let b = new String('JavaScript')
+    // let b = new String('JavaScript')
     // let d = new String('JavaScript')
     // console.log(b.valueOf())
 
-    console.log(b)
+    // console.log(b)
 
-    console.log(a.length)
+    // console.log(a.length)
 
-    console.log(a.indexOf('HTML'))
+    // console.log(a.indexOf('HTML'))  // First Occurence of that particular string/character [index exists ? index : -1]
+
+    // console.log(a.lastIndexOf('HTML'))  // Last Occurence of that particular string/character [index exists ? index : -1]
+
+    // console.log(a.toLowerCase())
+
+    // console.log(a.toUpperCase())
+
+    // let x = 'Lorem ipsum dolor sit Lorem consectetur adipisicing elit. Vitae quod voluptates quidem harum quae ex neque aspernatur nostrum facere, eligendi explicabo? Libero veniam inventore error molestiae ut in quod incidunt.'
+
+    // console.log(x.indexOf('we'))
+
+    // console.log(x.includes('sit'))  // true/false
+
+    // console.log(x.startsWith(' L')) // true/false
+    // console.log(x.endsWith('.'))   // true/false
+
+    // x = x.replaceAll('Lorem', 'JS')
+
+    // console.log(x)  // replace -> only first occurrence; replaceAll -> All occurrences
+
+    // console.log(x.trim())
+
+    // console.log(x[7])
+
+    // console.log(x.charAt(7))
+
+    // console.log(x.charCodeAt(7))
+
+
+    let a = 'Javascript is fantastic, and is definitely a good programming language to start with. This is IS good!'
+    // console.log(a.indexOf('is', a.indexOf('is')+1))
+
+    // let x = a.match(/is/gi)  // /regularExpression/ g -> global; i -> case insensitive
+
+    // let x = a.search(/is/gi)
+
+    // + -> Concatenate Operator for string
+    // let a = 'JavaScript'
+
+    // let b = 'HTML'
+
+    // console.log(a + b)
+
+    // console.log(a.concat(b))
+
+    // console.log(a.slice(0, -2))
+
+    // console.log(a.indexOf('HTML', 18))
 
   </script>
 </head>
+
 <body>
-  
+  <input type='text' placeholder='Name'>
 </body>
+
 </html>
 
 <!--
@@ -41,4 +92,15 @@
       this.batch = batchNo
     }
   }
+
+  ASCII CHAR CODE
+
+  A - 65
+  B - 66
+
+  a - 97
+  b - 98
+  c - 99
+  ... 
+  p - 112
 -->
