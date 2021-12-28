@@ -5,11 +5,11 @@ FUNCTIONS: (METHOD)
 */
 
 // 1. FUNCTION DEFINITION
-// function fun1(){
-//   let a = 2;
-//   let b = 6;
-//   console.log(a+b)
-// }
+function fun1(){
+  let a = 2;
+  let b = 6;
+  console.log(a+b)
+}
 
 // 2. FUNCTION CALL
 console.log(1)
@@ -21,3 +21,8 @@ fun1()
 console.log(5)
 console.log(6)
 
+// function fun1(){
+//   let a = 2;
+//   let b = 6;
+//   console.log(a+b)
+// }
