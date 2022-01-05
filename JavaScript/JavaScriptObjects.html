@@ -14,11 +14,11 @@
       - key and value pair
     */
 
-    let souravDetails = {
-      'name' : 'Sourav',
-      'country': 'India',
-      'course': 'Web Dev'
-    }
+    // let souravDetails = {
+    //   'name' : 'Sourav',
+    //   'country': 'India',
+    //   'course': 'Web Dev'
+    // }
 
     // let monalisaDetails = {
     //   'name': 'Monalisa',
@@ -60,15 +60,19 @@
 <body>
   <p id='p1'></p>
   <script>
-    // let souravDetails = {
-    //   'name' : 'Sourav',
-    //   'country': 'India',
-    //   'course': 'Web Dev'
-    // }
+    let souravDetails = {
+      'name' : 'Sourav',
+      'country': 'India',
+      'course': 'Web Dev'
+    }
 
     // let arr = [1, 3, 4]
 
-    // document.getElementById('p1').innerText = JSON.stringify(souravDetails)
+    document.getElementById('p1').innerText = JSON.stringify(souravDetails) // JSON -> STRING 
+
+    let x = '{"name":"Sourav","country":"India","course":"Web Dev"}'
+
+    console.log(JSON.parse(x)) // STRING -> JSON
 
     /* 
       JSON - Javascript Object Notation 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS this</title>
+  <script>
+    // let sukanya = {
+    //   batch: 'BATCH 11',
+    //   isPresent: true,
+    //   friends: ['Prajakta', 'Pratik', 'Ritesh'],
+    //   hi: function () {
+    //     console.log('Hi')
+    //   }
+    // }
+
+    // let sukanya = {
+    //   batch: 'BATCH 11',
+    //   isPresent: true,
+    //   friends: ['Prajakta', 'Pratik', 'Ritesh'],
+    //   hi: (name) => console.log('Hi ' + name)
+    // }
+
+    // sukanya.hi('Lakshmi')
+
+    // console.log(this) -> Window Object (GLOBAL SCOPE)
+
+    // this -> refers to the owner of that specific method
+
+    let saurabh = {
+      firstName: 'Saurabh',
+      lastName: 'Rajput',
+      noOfHoursInvestedInJs: 3,
+      noOfHoursInvestedInHTMLnCSS: 2,
+      fullName: function () {
+        // console.log(this) -> saurabh Object
+        console.log(this.firstName + ' ' + this.lastName)
+      }
+    }
+
+    let sudharma = {
+      firstName: 'Sudharama',
+      lastName: 'Kumar',
+      noOfHoursInvestedInJs: 2,
+      noOfHoursInvestedInHTMLnCSS: 5,
+      fullName: function () {
+        console.log(this.firstName + ' ' + this.lastName)
+      }
+    }
+
+    saurabh.fullName()
+    sudharma.fullName()
+
+    // Arrow Functions:
+    // 1. Arrow Functions are not hoisted
+    // 2. this keyword doesn't work inside arrow functions
+
+    /* Properties and Methods
+      Properties: batch, isPresent, friends
+      Methods: fullName 
+    */
+
+
+    /*
+      Create an Object
+      - two properties
+      - third property - array with 15 elements (2-100)
+      - create a method: check for all prime numbers present in that array
+    */
+
+    /* 
+      - Iterate through each of array elements
+      - Prime Number logic for each of those elements
+    */
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
