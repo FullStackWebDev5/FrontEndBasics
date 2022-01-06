@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Constructors</title>
+  <script>
+    // let shashwath = {
+    //   name: 'Shashwath',
+    //   course: 'FE DEV',
+    //   batch: 'Batch 11',
+    //   techStack: 'MERN'
+    // }
+
+    // let prajakta = {
+    //   name: 'Prajakta',
+    //   course: 'BE DEV',
+    //   batch: 'Batch 12',
+    //   techStack: 'MEAN'
+    // }
+
+    // Constructors: Methods which are used to give initial values to the objects
+    function Student(name, course, batch, techStack) {
+      this.name = name
+      this.course = course
+      this.batch = batch
+      this.techStack = techStack
+    }
+
+    let amber = new Student('Amber', 'Course1', 'Batch1', 'MERN')
+    let jyoti = new Student('Jyoti', 'Course1', 'Batch1', 'MERN')
+
+    console.log(jyoti)
+
+    let x = 5
+    console.log(x)
+
+    // Inbuild Constructors
+    let y = new Number(5)
+
+    console.log(y.valueOf())
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

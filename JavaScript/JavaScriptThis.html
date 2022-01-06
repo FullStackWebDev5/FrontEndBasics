@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,33 +29,46 @@
 
     // this -> refers to the owner of that specific method
 
-    let saurabh = {
-      firstName: 'Saurabh',
-      lastName: 'Rajput',
-      noOfHoursInvestedInJs: 3,
-      noOfHoursInvestedInHTMLnCSS: 2,
-      fullName: function () {
-        // console.log(this) -> saurabh Object
-        console.log(this.firstName + ' ' + this.lastName)
-      }
-    }
+    // let saurabh = {
+    //   firstName: 'Saurabh',
+    //   lastName: 'Rajput',
+    //   noOfHoursInvestedInJs: 3,
+    //   noOfHoursInvestedInHTMLnCSS: 2,
+    //   fullName: function () {
+    //     // console.log(this) -> saurabh Object
+    //     console.log(this.firstName + ' ' + this.lastName)
+    //   }
+    // }
 
-    let sudharma = {
-      firstName: 'Sudharama',
-      lastName: 'Kumar',
-      noOfHoursInvestedInJs: 2,
-      noOfHoursInvestedInHTMLnCSS: 5,
-      fullName: function () {
-        console.log(this.firstName + ' ' + this.lastName)
-      }
-    }
+    // let sudharma = {
+    //   firstName: 'Sudharama',
+    //   lastName: 'Kumar',
+    //   noOfHoursInvestedInJs: 2,
+    //   noOfHoursInvestedInHTMLnCSS: 5,
+    //   fullName: function () {
+    //     return this.firstName + ' ' + this.lastName
+    //   }
+    // }
 
-    saurabh.fullName()
-    sudharma.fullName()
+    // console.log(sudharma.fullName())
 
-    // Arrow Functions:
+    // saurabh.fullName()
+    // sudharma.fullName()
+
+    // function abc(a, b){
+    //   console.log(arguments)
+    // }
+
+    // let abc = (a, b) => {
+    //   console.log(arguments)
+    // }
+
+    // abc('Sai Krishna', 2)
+
+    // Arrow Functions: (Syntactic Sugar)
     // 1. Arrow Functions are not hoisted
     // 2. this keyword doesn't work inside arrow functions
+    // 3. arguments keyword doesn't work inside arrow functions
 
     /* Properties and Methods
       Properties: batch, isPresent, friends
@@ -73,9 +87,32 @@
       - Iterate through each of array elements
       - Prime Number logic for each of those elements
     */
+
+    // let obj = {
+    //   question: 'To check weather a number is primary or not',
+    //   submittedBy: 'Shivam Dhoundiyal',
+    //   arr: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 88, 77, 73, 93, 31],
+    //   func: function () {
+    //     for (let i = 0; i < this.arr.length; i++) {
+    //       let factors = 0;
+    //       for (let j = 2; j <= this.arr[i]/2; j++) {
+    //         if (this.arr[i] % j == 0)
+    //           factors++
+    //       }
+    //       if (factors < 2) {
+    //         this.primeNumberArr.push(this.arr[i])
+    //       }
+    //     }
+    //   },
+    //   primeNumberArr: []
+    // }
+    // objects.entries(obj)
+    // obj.func()
   </script>
 </head>
+
 <body>
-  
+
 </body>
+
 </html>
