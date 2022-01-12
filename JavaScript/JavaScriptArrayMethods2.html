@@ -17,9 +17,11 @@
     //   console.log(index + ' - ' + value)
     // }
 
+    /* ------------------------------------------------------- */
     /* 1. FOREACH: Iterating through each element
     - Loop through each element
     */
+    /* ------------------------------------------------------- */
 
     // arr.forEach(iWillUseThisShortlyForIterating)
 
@@ -46,11 +48,13 @@
 
     // console.log(newArray)
 
+    /* ------------------------------------------------------- */
     /* 2. FILTER: Loop and store elements in a new array based on condition
     - Loop through each element
     - Check for a condition
     - Based on condition, elements will be pushed to new array, which will be returned
     */
+    /* ------------------------------------------------------- */
 
     // let newArray = arr.filter(function (element){
     //   return element === 1
@@ -64,10 +68,12 @@
 
     // console.log(newArray);
 
+    /* ------------------------------------------------------- */
     /* 3. MAP: 
     - Loop through each element
     - Returns array
     */
+    /* ------------------------------------------------------- */
 
     // arr = [20000, 30000, 10000, 50000, 40000]
 
@@ -80,33 +86,145 @@
     // console.log(arr)
 
     // Fibonacci Series: 0 1 1 2 3 5 8 13 21 34 55 ...
-    let arr = [2, 6, 3, 1, 4, 9]   // O/P: [1, 8, 2, 1, 3, 34]
+    // let arr = [2, 6, 3, 1, 4, 9]   // O/P: [1, 8, 2, 1, 3, 34]
 
-    // Q: Use the .map() and return a new array which will have the number at that index in Fibonacci series
+    // // Q: Use the .map() and return a new array which will have the number at that index in Fibonacci series
 
-    let fibonacciSeriesArray = [0, 1]
-    let x = 15
-    for (let i = 1; i < x; i++) {
-      fibonacciSeriesArray.push(fibonacciSeriesArray[i] + fibonacciSeriesArray[i - 1])
-    }
-    let op = arr.map((element) => {
-      return fibonacciSeriesArray[element]
-    })
-    console.log(op)
+    // let fibonacciSeriesArray = [0, 1]
+    // let x = 15
+    // for (let i = 1; i < x; i++) {
+    //   fibonacciSeriesArray.push(fibonacciSeriesArray[i] + fibonacciSeriesArray[i - 1])
+    // }
+    // let op = arr.map((element) => {
+    //   return fibonacciSeriesArray[element]
+    // })
+    // console.log(op)
 
 
-    function fibonacci(num) {
-      if (num < 2) {
-        return num
-      }
-      else {
-        return fibonacci(num - 1) + fibonacci(num - 2)
-      }
-    }
+    // function fibonacci(num) {
+    //   if (num < 2) {
+    //     return num
+    //   }
+    //   else {
+    //     return fibonacci(num - 1) + fibonacci(num - 2)
+    //   }
+    // }
 
-    let newArr = arr.map((value) => {
-      return fibonacci(value)
-    })
+    // let newArr = arr.map((value) => {
+    //   return fibonacci(value)
+    // })
+
+    // let arr = [4, 2, 6, 12, 8, 10]
+
+    // let newarr = arr.filter((value) => {
+    //   return value % 2 != 0
+    // })
+
+    // if (newarr.length === 0) {
+    //   console.log("YES")
+    // }
+    // else {
+    //   console.log("NO")
+    // }
+
+    // let flag = true
+
+    // arr.forEach((e) => {
+    //   if(e % 2 != 0)
+    //     flag = false
+    // })
+
+    // if(flag === true)
+    //   console.log('YES')
+    // else
+    //   console.log('NO')
+
+    /* ------------------------------------------------------- */
+    /* 4. EVERY (Whether ALL elements in that array satisfy a particular condition or not)
+    */
+    /* ------------------------------------------------------- */
+
+    // let areAllElementsEven = arr.every(function (element) {
+    //   return element % 2 === 0
+    // })
+
+    // console.log(areAllElementsEven)
+
+
+    // let x = [3, 5, 2, 7, 9] // YES
+
+    // [3, 5, 7] // NO
+
+    // [3, 5, 7, 2, 4, 6] // YES
+
+    // Return 'YES' if there exists atleast 1 even element
+
+    // var arr = [1, 3, 4, 5, 7];
+
+    // var newARR = arr.filter(function (value) {
+    //   return value % 2 === 0;
+    // });
+
+    // if (newARR.length !== 0) {
+    //   console.log("YES");
+    // } else {
+    //   console.log("NO");
+    // }
+
+    /* ------------------------------------------------------- */
+    /* 5. SOME (Whether ATLEAST 1 element satisfies the condition)
+    */
+    /* ------------------------------------------------------- */
+
+    // let x = [3, 5, 7, 9, 1, 7, 9]
+
+    // let ifThereExistsEvenOneElementWhichIsEven = x.some(function (element) {
+    //   return element % 2 === 0
+    // })
+
+    // if (ifThereExistsEvenOneElement)
+    //   console.log('YES')
+    // else
+    //   console.log('NO')
+
+    // let ifAllElementsAreOdd = x.every(function (element) {
+    //   return element % 2 !== 0
+    // })
+
+    // // 5 / 3
+    // // Quotient: 1   : /
+    // // Remainder: 2  : %
+
+    // console.log(ifAllElementsAreOdd)
+
+    // let y = x.filter(element => element % 2 === 0)
+
+    // console.log(y.length)
+
+    // console.log(x.some(e => {
+    //   return e % 2 === 0
+    // }))
+
+
+    // let arr = [4, 4, 5, 4, 20, 6]
+
+    // let isHavingAtleastOneElementWhichIsPrime = arr.some((element) => {
+    //   let flag = true
+    //   for (let i = 2; i < element; i++) {
+    //     if (element % i == 0){
+    //       flag = false
+    //       break
+    //     }
+    //   }
+    //   return flag
+    // })
+
+    // console.log(isHavingAtleastOneElementWhichIsPrime)
+
+    /* 
+    .some will return true: If atleast one iteration returns true
+    .every will return true: If all iterations return true
+    */
   </script>
 </head>
 
