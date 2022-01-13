@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS ES 6</title>
+  <script>
+    // 1. Template Strings
+    // let studentName = 'Mrunal'
+    // console.log(`${studentName} is a good student. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    //   Enim dignissimos quibusdam dolores maxime animi facilis, repudiandae dolorum doloribus a delectus libero aspernatur obcaecati id 
+    //   ipsa aut qui, debitis recusandae aliquid quia tenetur quam sunt. Doloremque minus, et adipisci ex fugit repellendus enim molestiae magni 
+    //   minima a earum dolorem repellat voluptates voluptas numquam, magnam impedit natus hic cum assumenda dicta. Reprehenderit 
+    //   unde qui porro numquam natus illum amet quasi ex ipsa tempora nihil explicabo et tenetur aspernatur perferendis facilis totam, 
+    //   temporibus facere molestiae distinctio quidem. Recusandae possimus repellendus, eveniet odio maiores aut omnis nihil fugit reprehenderit 
+    //   natus, rerum temporibus. Modi, sequi?
+    // `)
+
+    // 2. let and const
+    // let -> scope
+    // const -> constant value
+
+    // 3. Arrow functions
+    // function abc(){
+    //   console.log('abc')
+    // }
+
+    // const abc = () => console.log('abc')
+
+    // 4. Default Parameters
+    // function abc(a = 0, b = 0) {
+    //   console.log(a + b)
+    // }
+
+    // 5. Exponential Operators
+    // let a = 3 ** 2
+
+    // console.log(a)
+
+    // 6. Spread Operator
+
+    let arr1 = [3, 4, 5]
+    let arr2 = [1, 2]
+    let arr3 = [6, 7, 8, 9]
+    let arr4 = [10]
+
+    let parentArr = [...arr2, ...arr1, ...arr3, ...arr4]
+
+    // parentArr = arr2.concat(arr1)
+
+    // arr2.forEach(element => {
+    //   parentArr.push(element)
+    // })
+    // arr1.forEach(element => {
+    //   parentArr.push(element)
+    // })
+
+    // let x = arr2.length
+    // let y = arr1.length
+
+    // for(let i = 0; i< x ; i++)
+    //   parentArr.push(arr2.shift())
+    // for(let i = 0; i< y ; i++)
+    //   parentArr.push(arr1.shift())
+
+    // let para = (`${arr2},${arr1}`)
+    // let parentArr = para.split(',')
+
+    console.log(parentArr)
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
