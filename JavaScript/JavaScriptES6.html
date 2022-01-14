@@ -41,12 +41,12 @@
 
     // 6. Spread Operator
 
-    let arr1 = [3, 4, 5]
-    let arr2 = [1, 2]
-    let arr3 = [6, 7, 8, 9]
-    let arr4 = [10]
+    // let arr1 = [3, 4, 5]
+    // let arr2 = [1, 2]
+    // let arr3 = [6, 7, 8, 9]
+    // let arr4 = [10]
 
-    let parentArr = [...arr2, ...arr1, ...arr3, ...arr4]
+    // let parentArr = [...arr2, ...arr1, ...arr3, ...arr4]
 
     // parentArr = arr2.concat(arr1)
 
@@ -68,7 +68,30 @@
     // let para = (`${arr2},${arr1}`)
     // let parentArr = para.split(',')
 
-    console.log(parentArr)
+    // console.log(parentArr)
+
+    // const shraddha2 = {
+    //   ...shraddha,
+    // }
+
+    // shraddha2.batch = 'Batch 12'
+
+    // console.log(shraddha)
+
+    const address = {
+      city: 'Mumbai',
+      state: 'Maharashtra',
+      country: 'India',
+    }
+
+    const shraddha = {
+      name: 'Shraddha',
+      batch: 'Batch 11',
+      techStack: 'MERN',
+      address: { ...address }
+    }
+
+    console.log(shraddha)
 
   </script>
 </head>
