@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Closures</title>
+  <script>
+    // Inner block has access to all variables in the outer scope
+    // let x = 5
+
+    // function abc(){
+    //   let y = 10
+    //   {
+    //     // console.log(x, y)
+    //   }
+    //   return y
+    // }
+
+    /* Higher Order Functions
+    - 1. Takes another function as argument (Callbacks)
+    - 2. Returns another function
+    */
+
+    function abc(){ // Outer Function
+      let y = 10
+
+      return function (){ // Inner Function
+        return y
+      }
+    }
+
+    // Closures: Inner Function will have access to all the variables in outer scope even after it has been returned
+
+    const innerFunction = abc()
+    console.log(innerFunction())
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
