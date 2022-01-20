@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Call, Apply, Bind</title>
+</head>
+<script>
+  /*
+  Array
+  - length (property)
+  - .filter, .map, .forEach, .some, .every, (methods)
+  */
+
+  /*
+  Function
+  - code, name [Optional] (properties)
+  - call, apply, bind (methods)
+
+  1. Call
+  - Invoked at the time of usage
+  - Arguments separated by commas (,)
+
+  2. Apply
+  - Invoked at the time of usage
+  - Arguments specified in an array
+
+  3. Bind
+  - Returns a modified function with 'this' reference to the bound object
+  */
+
+  // let saurabh = {
+  //   firstName: 'Saurabh',
+  //   lastName: 'Rajput',
+  //   noOfHoursInvestedInJs: 3,
+  //   noOfHoursInvestedInHTMLnCSS: 2,
+  //   fullName: function () {
+  //     console.log(this.firstName + ' ' + this.lastName)
+  //   }
+  // }
+
+  let saurabh = {
+    firstName: 'Saurabh',
+    lastName: 'Rajput',
+    noOfHoursInvestedInJs: 3,
+    noOfHoursInvestedInHTMLnCSS: 2,
+  }
+
+  let suvarchala = {
+    firstName: 'Suvarchala',
+    lastName: 'XYZ',
+    noOfHoursInvestedInJs: 3,
+    noOfHoursInvestedInHTMLnCSS: 2,
+  }
+
+  // function fullName(){
+  //   console.log(this.firstName + ' ' + this.lastName + " - " + state)
+  // }
+
+  // let fullName2 = fullName.bind(saurabh)
+
+  // fullName2()
+
+  // // fullName2 is a modified function in which 'this' keyword refers to 'saurabh' object
+
+  // fullName2()
+
+  // let fullName3 = fullName.bind(suvarchala)
+
+  // fullName3()
+
+  /* ------------------------------------------------- */
+
+  // function fullName(city, state){
+  //   console.log(this.firstName + ' ' + this.lastName + ' is from ' + city + ',' + state)
+  // }
+
+  // fullName('Mumbai', 'Maharashtra')
+
+  // fullName.call(suvarchala, 'Mumbai', 'Maharashtra')
+
+  // fullName.apply(suvarchala, ['Mumbai', 'Maharashtra'])
+
+</script>
+
+<body>
+
+</body>
+
+</html>
