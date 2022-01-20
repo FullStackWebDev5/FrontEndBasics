@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,47 @@
   <title>Asynchronous</title>
   <script>
     /*
-    Synchronous - one expression executed after another (Format)
-    Asynchronous - any expression execute at controlled/ uncontrolled time (No Format)
+    1. Synchronous - one expression executed after another (Format)
+    2. Asynchronous - any expression execute at controlled/ uncontrolled time (No Format)
+       Eg: a. setTimeout, b. setInterval
     */
 
-    console.log(1)
+    // console.log(1)
 
-    console.log(2)
+    // console.log(2)
 
-    setTimeout(() => {
-      console.log(3)
-    }, 5000)
+    // setTimeout(() => {
+    //   console.log(3)
+    // }, 0)
 
-    console.log(4)
+    // console.log(4)
+
+    // for(let i = 5; i < 500 ; i++){
+    //   console.log(i)
+    // }
+
+    // setTimeout(function(){
+    //   console.log(1)
+    // }, 2000)
+
+    // setTimeout(function(){
+    //   console.log(2)
+    // }, 4000)
+
+    // setTimeout(function(){
+    //   console.log(3)
+    // }, 2000)
+
+    // setInterval(function () {
+    //   document.getElementById('show-date').innerText = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' })
+    // }, 1000)
+
+    
   </script>
 </head>
+
 <body>
-  
+  <h1 id='show-date'></h1>
 </body>
+
 </html>

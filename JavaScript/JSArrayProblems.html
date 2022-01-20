@@ -16,7 +16,29 @@
 
     let studentWhoLikeIceCream = inputArray.filter(student => student.likesIceCream)
 
-    console.log(studentWhoLikeIceCream)
+    // 1. Solution 1
+    // let studentNamesWhoLikeIceCream = studentWhoLikeIceCream.map(student => student.name)
+
+    // 2. Solution 2
+    // let step1 = inputArray.map(student => {
+    //   if(student.likesIceCream)
+    //     return student.name
+    // })
+
+    // let studentNamesWhoLikeIceCream = step1.filter(student => {
+    //   return student
+    // })
+
+    // 3. Solution 3
+
+    // let studentNamesWhoLikeIceCream = []
+
+    // inputArray.forEach(student => {
+    //   if(student.likesIceCream)
+    //     studentNamesWhoLikeIceCream.push(student.name)
+    // })
+
+    // console.log(studentNamesWhoLikeIceCream)
   </script>
 </head>
 <body>
