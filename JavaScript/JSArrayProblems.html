@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,19 @@
   <title>JS Array Problems</title>
   <script>
     let inputArray = [
-      {name: 'Amber', batch: 'Batch 12', likesIceCream: false},
-      {name: 'Pratik', batch: 'Batch 12', likesIceCream: true},
-      {name: 'Charan', batch: 'Batch 11', likesIceCream: false},
-      {name: 'Dhanashree', batch: 'Batch 12', likesIceCream: true},
-      {name: 'Anirban', batch: 'Batch 10', likesIceCream: false}
+      { name: 'Amber', batch: 'Batch 12', likesIceCream: false },
+      { name: 'Pratik', batch: 'Batch 12', likesIceCream: true },
+      { name: 'Charan', batch: 'Batch 11', likesIceCream: false },
+      { name: 'Dhanashree', batch: 'Batch 11', likesIceCream: true },
+      { name: 'Anirban', batch: 'Batch 10', likesIceCream: false }
     ]
 
-    let studentWhoLikeIceCream = inputArray.filter(student => student.likesIceCream)
+    // let studentWhoLikeIceCream = inputArray.filter(student => student.likesIceCream)
 
-    // 1. Solution 1
-    // let studentNamesWhoLikeIceCream = studentWhoLikeIceCream.map(student => student.name)
+    // 1. Solution 1 (a)
+    // let studentNamesWhoLikeIceCream = studentWhoLikeIceCream.map(student => student.name).filter(student => student)
 
-    // 2. Solution 2
+    // 2. Solution 1 (b)
     // let step1 = inputArray.map(student => {
     //   if(student.likesIceCream)
     //     return student.name
@@ -29,7 +30,7 @@
     //   return student
     // })
 
-    // 3. Solution 3
+    // 3. Solution 2
 
     // let studentNamesWhoLikeIceCream = []
 
@@ -39,9 +40,29 @@
     // })
 
     // console.log(studentNamesWhoLikeIceCream)
+
+    // Q - Return all student names who like icecream and are from 'Batch 11'
+
+    //let studentNamesWhoLikeIceCream = []
+
+    // inputArray.forEach(student => {
+    //   if(student.likesIceCream && student.batch === 'Batch')
+    //     studentNamesWhoLikeIceCream.push(student.name)
+    // })
+
+    // console.log(studentNamesWhoLikeIceCream)
   </script>
 </head>
+
 <body>
-  
+  <!-- <h1 id='h11'></h1>
+  <script>
+    let a = {
+      a: 'a'
+    }
+
+    document.getElementById('h11').innerHTML = JSON.stringify(a)
+  </script> -->
 </body>
+
 </html>
