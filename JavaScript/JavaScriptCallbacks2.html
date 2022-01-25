@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Callbacks</title>
+  <script>
+    // const f1 = function(callback){
+    //   setTimeout(function() {
+    //     console.log('Function 1 executed')
+    //     callback()
+    //   }, 2000)
+    // }
+
+    // f1(function() {
+    //   console.log('This should be executed in the last')
+    // })
+
+    // CALLBACK HELL
+    const executeOrder = function(callback){
+      console.log('Order placed')
+      setTimeout(function() {
+        console.log('Order Received!')
+        console.log('Chef started preparing!')
+        setTimeout(function() {
+          console.log('Pizza Sauce added!')
+          setTimeout(function() {
+            console.log('First layer of cheeze added!')
+            setTimeout(function() {
+              console.log('Toppings added!')
+              setTimeout(function() {
+                console.log('Final layer of cheeze added!')
+                setTimeout(function() {
+                  console.log('Pizza baked!')
+                  setTimeout(function() {
+                    console.log('Oregano added and packed!')
+                    callback()
+                  }, 4000)
+                }, 8000)
+              }, 2000)
+            }, 4000)
+          }, 3000)
+        }, 5000)
+      }, 2000)
+    }
+
+    executeOrder(function() {
+      console.log('The order is ready and handed over to the Zomato guy!')
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
+<!--
+  [2 secs]
+  1. Order Received
+  2. Chef started preparing 
+  [5 secs]
+  3. Pizza Sauce added
+  [3 secs]
+  4. First layer of cheeze added
+  [4 secs]
+  5. Toppings added
+  [2 secs]
+  6. Final layer of cheeze
+  [8 secs]
+  7. Pizza Baked
+  [4 secs]
+  8. Oregeno added and packed
+-->
