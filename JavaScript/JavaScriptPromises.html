@@ -17,6 +17,83 @@
     Way 1: --- pending ---- resolved --- fulfilled
     Way 2: --- pending ---- rejected --- fulfilled    
     */
+
+    // let x = 5
+    // let y = 6
+
+    // let promise = new Promise(function(resolve, reject){
+    //   if(x === y)
+    //     resolve('The values of x and y are equal')
+    //   else if (x > y)
+    //     resolve('The values of x is greater than y')
+    //   else
+    //     reject('The values of x is lesser than y')
+    // })
+
+    // promise.then(function(){
+    //   console.log('This was resolved :)')
+    // })
+
+    /*
+    Promise 
+    .then - First callback to handle resolved scenario
+          - Second callback to handle rejected scenario
+
+    .catch - Handle rejected scenario
+
+    You can resolve/reject with a value
+
+    */
+
+    // promise.then(function(resolvedMessage){
+    //   console.log('This promise was resolved, with the message - ', resolvedMessage)
+    // }, function(rejectedMessage){
+    //   console.log('This promise was rejected, with the message - ', rejectedMessage)
+    // })
+
+    // console.log('START of the CODE')
+
+    // let promise = new Promise(function(resolve, reject){
+    //   setTimeout(function(){
+    //     resolve('Finally, this was resolved after 5 secs')
+    //   }, 5000)
+    // })
+
+    // console.log(promise)
+
+    // promise.then(function(resolvedMessage){
+    //   console.log('This promise was resolved, with the message - ', resolvedMessage)
+    //   console.log(promise)
+    // }).catch(function(rejectedMessage){
+    //   console.log('This promise was rejected, with the message - ', rejectedMessage)
+    // })
+
+    // console.log('END of the CODE')
+
+
+    const fetchProfileInformation = function () {
+      return new Promise(function(resolve, reject){
+        console.log('Fetching Information ...')
+        setTimeout(function(){
+          resolve('It took 5 secs to load the profile')
+        }, 5000)
+    })
+    }
+
+    fetchProfileInformation().then(function(resolvedMessage){
+      console.log('This promise was resolved, with the message - ', resolvedMessage)
+    }).catch(function(rejectedMessage){
+      console.log('This promise was rejected, with the message - ', rejectedMessage)
+    })
+
+    // const fetchProfileInformation = function () {
+    //   console.log('Fetching Information ...')
+    //   setTimeout(function(){
+    //     return 'It took 5 secs to load the profile'
+    //   }, 5000)
+    // }
+
+    // console.log(fetchProfileInformation())
   </script>
 </head>
 <body>
