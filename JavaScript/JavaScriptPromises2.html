@@ -49,6 +49,113 @@
     //   console.log(updatedMessage2)
     // })
 
+    // let fetchInformationFromServer = new Promise(function (resolve, reject) {
+    //   console.log('Fetching Data ...')
+    //   setTimeout(function(){
+    //     resolve('Fetched data successfully')
+    //   }, 3000)
+    // })
+
+    // let processFetchedInformation = new Promise(function (resolve, reject) {
+    //   setTimeout(function(){
+    //     resolve('Processed fetched data successfully')
+    //   }, 2000)
+    // })
+
+    // fetchInformationFromServer.then(function(resolvedMessage) {
+    //   console.log(resolvedMessage)
+    // })
+
+    // processFetchedInformation.then(function(resolvedMessage) {
+    //   console.log(resolvedMessage)
+    // })
+
+    // fetchInformationFromServer.then(function(resolvedMessage) {
+    //   console.log(resolvedMessage)
+    //   return processFetchedInformation
+    // }).then(function(resolvedMessage) {
+    //   console.log(resolvedMessage)
+    // })
+
+    /* ------ */
+
+    const executeOrder = function () {
+      return new Promise(function (resolve, reject) {
+        console.log('Order placed')
+        setTimeout(function () {
+          console.log('Order Received!')
+          console.log('Chef started preparing!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addPizzaSauce = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(function () {
+          console.log('Pizza Sauce added!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addFirstCheezeLayer = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(function () {
+          console.log('First layer of cheeze added!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addToppings = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(function () {
+          console.log('Toppings added!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addFinalCheezeLayer = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('Final layer of cheeze added!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const bakePizza = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('Pizza baked!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    const addOreganoAndPack = () => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('Oregano added and packed!')
+          resolve()
+        }, 1000)
+      })
+    }
+
+    executeOrder()
+    .then(addPizzaSauce)
+    .then(addFirstCheezeLayer)
+    .then(addToppings)
+    .then(addFinalCheezeLayer)
+    .then(bakePizza)
+    .then(addOreganoAndPack)
+    .then(function () {
+      console.log('The order is ready and handed over to the Zomato guy!')
+    })
+
+
   </script>
 </head>
 
