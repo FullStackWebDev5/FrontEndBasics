@@ -40,12 +40,52 @@
           hindi: '81',
           social: '61',
         }
+      },
+      {
+        name: 'Lakshman',
+        batch: 'Batch 14',
+        marks: {
+          english: '48',
+          maths: '83',
+          science: '63',
+          hindi: '71',
+          social: '63',
+        }
       }
     ]
 
     /* Q -  Return an array with total marks
     Expected O/P: [261, 258, 325]
     */
+
+    /* Q -  Return an array of student names who secured > 30 marks in all subjects
+    Expected O/P: ['Lakshman']
+    */
+
+    // Solution Method 1
+    // let step1 = students.map(student => {
+    //   let { english, maths, science, hindi, social } = student.marks
+    //   if (Number(english) > 30 && Number(maths) > 30 && Number(science) > 30 && Number(hindi) > 30 && Number(social) > 30){
+    //     return student.name
+    //   }
+    // })
+
+    // let studentNamesWhoHavePassed = step1.filter(student => student)
+
+    // console.log(studentNamesWhoHavePassed)
+
+    // Solution Method 2
+
+    let studentNamesWhoHavePassed = [];
+    
+    students.forEach((student) => {
+      let marks = Object.values(student.marks);
+      if(marks.every((singleSubjectMarks) => singleSubjectMarks > 30))
+        studentNamesWhoHavePassed.push(student.name)
+    });
+
+    console.log(studentNamesWhoHavePassed);
+
   </script>
 </head>
 

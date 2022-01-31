@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Event Loop</title>
+  <script>
+    console.log(1)
+    console.log(2)
+    console.log(3)
+    setTimeout(function(){
+      console.log(4)
+    }, 3000)
+
+    setTimeout(function(){
+      console.log(8)
+    }, 5000)
+    console.log(5)
+    console.log(6)
+
+    /* Event loop:
+    Keeps track of call stack, and if found empty, pushed tasks from the task queue into the call stack
+    */
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+    // const arr = [20, 5, 100, 1, 90, 200, 40, 29];
+    // for (let item of arr) {
+    //   setTimeout(() => {
+    //     console.log(item)
+    //   }, item)
+    // }
+-->
