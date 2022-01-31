@@ -58,6 +58,32 @@
     Expected O/P: [261, 258, 325]
     */
 
+    // METHOD - 1
+    // let studentsTotalMarks = students.map((student) => {
+    //   let total = 0
+    //   for (subject in student.marks){
+    //     total = total + Number(student.marks[subject])
+    //   }
+    //   return total
+    // })
+
+    // METHOD - 2
+    // let studentsTotalMarks = students.map((student) => {
+    //   let { english, maths, science, hindi, social} = student.marks
+    //   return Number(english) + Number(maths) + Number(science) + Number(hindi) + Number(social)
+    // })
+
+    // METHOD - 3
+    // let studentsTotalMarks = students.map((student) => {
+    //   let marks = Object.values(student.marks)
+    //   return marks.reduce((total, singleMarks) => {
+    //     return total + Number (singleMarks)
+    //   }, 0)
+    // })
+
+    // console.log(studentsTotalMarks)
+
+
     /* Q -  Return an array of student names who secured > 30 marks in all subjects
     Expected O/P: ['Lakshman']
     */
@@ -76,16 +102,15 @@
 
     // Solution Method 2
 
-    let studentNamesWhoHavePassed = [];
+    // let studentNamesWhoHavePassed = [];
     
-    students.forEach((student) => {
-      let marks = Object.values(student.marks);
-      if(marks.every((singleSubjectMarks) => singleSubjectMarks > 30))
-        studentNamesWhoHavePassed.push(student.name)
-    });
+    // students.forEach((student) => {
+    //   let marks = Object.values(student.marks);
+    //   if(marks.every((singleSubjectMarks) => singleSubjectMarks > 30))
+    //     studentNamesWhoHavePassed.push(student.name)
+    // });
 
-    console.log(studentNamesWhoHavePassed);
-
+    // console.log(studentNamesWhoHavePassed);
   </script>
 </head>
 
