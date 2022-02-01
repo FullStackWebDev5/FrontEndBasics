@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Async Await</title>
+  <script>
+    let promise = new Promise(function(resolve, reject){
+      setTimeout(function(){
+        resolve('Promise resolved after 3s')
+      }, 3000)
+    })
+
+    // promise.then(function(resolvedMessage){
+    //   console.log(resolvedMessage)
+    // })
+
+    async function display(){
+      console.log(await promise)
+    }
+
+    console.log(1)
+
+    console.log(2)
+
+    display()
+
+    console.log(3)
+
+    console.log(4)
+
+
+    /* ---------------------------- */
+    // async function abc(){
+    //   return await setTimeout(function(){
+    //     return Promise.resolve('Resolved after 3 secs')
+    //   }, 3000)
+    // }
+
+    // async function display(){
+    //   return await abc().then(function(resolvedMessage){
+    //     return resolvedMessage
+    //   })
+    // }
+
+    // abc().then(function(resolvedMessage){
+    //   console.log(resolvedMessage)
+    // }).catch(function(rejectedMessage){
+    //   console.log(rejectedMessage)
+    // })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
