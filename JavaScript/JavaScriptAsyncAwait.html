@@ -1,57 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Async Await</title>
   <script>
-    let promise = new Promise(function(resolve, reject){
-      setTimeout(function(){
-        resolve('Promise resolved after 3s')
-      }, 3000)
-    })
-
-    // promise.then(function(resolvedMessage){
-    //   console.log(resolvedMessage)
+    // let promise1 = new Promise(function(resolve, reject){
+    //   setTimeout(function(){
+    //     resolve('Promise 1 resolved after 3s')
+    //   }, 3000)
     // })
 
-    async function display(){
-      console.log(await promise)
-    }
+    // promise1.then(function(resolvedMessage){
+    //   console.log('PROMISE 1 RESOLVED WITH MESSAGE - ', resolvedMessage)
+    // }).catch(function(rejectedMessage){
+    //   console.log('PROMISE 1 REJECTED WITH MESSAGE - ', rejectedMessage)
+    // })
 
-    console.log(1)
+    // EQUIVALENT ASYNC AWAIT REPRESENTATION
+    // async function display(){
+    //   console.log('DISPLAY FUNCTION STARTED')
+    //   try{
+    //     let resolvedMessage1 = await promise1
+    //     console.log('PROMISE 1 RESOLVED WITH MESSAGE - ', resolvedMessage1)
+    //   } catch (rejectedMessage) {
+    //     console.log('PROMISE 1 REJECTED WITH MESSAGE - ', rejectedMessage)
+    //   }
+    //   console.log('DISPLAY FUNCTION ENDED')
+    // }
 
-    console.log(2)
+    // let promise2 = new Promise(function(resolve, reject){
+    //   setTimeout(function(){
+    //     resolve('Promise 2 resolved after 10s')
+    //   }, 10000)
+    // })
 
-    display()
+    // promise1.then(function(resolvedMessage){
+    //   console.log('PROMISE 1 RESOLVED WITH MESSAGE - ', resolvedMessage)
+    //   return promise2
+    // }).then(function(resolvedMessage){
+    //   console.log('PROMISE 2 RESOLVED WITH MESSAGE - ', resolvedMessage)
+    // })
 
-    console.log(3)
+    /*
+      async - Informs JS that asynchronous code is being handled, also return a promise
+      await - Waits for the promise to get resolved and then returns the resolved message
+    */
 
-    console.log(4)
-
-
-    /* ---------------------------- */
-    // async function abc(){
-    //   return await setTimeout(function(){
-    //     return Promise.resolve('Resolved after 3 secs')
-    //   }, 3000)
+    // async function display(){
+    //   console.log('DISPLAY FUNCTION STARTED')
+    //   let resolvedMessage1 = await promise1
+    //   console.log('PROMISE 1 RESOLVED WITH MESSAGE - ', resolvedMessage1)
+    //   let resolvedMessage2 = await promise2
+    //   console.log('PROMISE 2 RESOLVED WITH MESSAGE - ', resolvedMessage2)
+    //   console.log('DISPLAY FUNCTION ENDED')
     // }
 
     // async function display(){
-    //   return await abc().then(function(resolvedMessage){
-    //     return resolvedMessage
+    //   console.log('DISPLAY FUNCTION STARTED')
+    //   try {
+    //     let pomiseToBeReturned = await promise1
+    //     return pomiseToBeReturned
+    //   } catch (rejectedMessage) {
+    //     console.log('PROMISE 1 REJECTED WITH MESSAGE - ', rejectedMessage)
+    //   }
+    //   console.log('DISPLAY FUNCTION ENDED')
+    // }
+
+    // display()
+
+
+    /* ---------------------------- */
+    async function abc() {
+      console.log('abc() FUNCTION STARTED')
+      await new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          resolve()
+        }, 3000)
+      })
+      console.log('THERE WAS A PROMISE WHICH WAS RESOLVED IN 3s')
+      return '[PROMISE RETURNED FROM FUNCTION abc()]'
+    }
+
+    async function display() {
+      console.log('DISPLAY FUNCTION STARTED')
+      let resolvedMessage =  await abc()
+      console.log('INSIDE DISPLAY FUNCTION, RESOLVED MESSAGE - ', resolvedMessage)
+      console.log('DISPLAY FUNCTION ENDED')
+    }
+
+    display()
+
+
+    /* ---------------------------------------------------------------- */
+
+    // const executeOrder = function () {
+    //   return new Promise(function (resolve, reject) {
+    //     console.log('Order placed')
+    //     setTimeout(function () {
+    //       console.log('Order Received!')
+    //       console.log('Chef started preparing!')
+    //       resolve()
+    //     }, 1000)
     //   })
     // }
 
-    // abc().then(function(resolvedMessage){
-    //   console.log(resolvedMessage)
-    // }).catch(function(rejectedMessage){
-    //   console.log(rejectedMessage)
-    // })
+    // const addPizzaSauce = () => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(function () {
+    //       console.log('Pizza Sauce added!')
+    //       resolve()
+    //     }, 1000)
+    //   })
+    // }
+
+    // const addFirstCheezeLayer = () => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(function () {
+    //       console.log('First layer of cheeze added!')
+    //       resolve()
+    //     }, 1000)
+    //   })
+    // }
+
+    // const addToppings = () => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(function () {
+    //       console.log('Toppings added!')
+    //       resolve()
+    //     }, 1000)
+    //   })
+    // }
+
+    // const addFinalCheezeLayer = () => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       console.log('Final layer of cheeze added!')
+    //       resolve()
+    //     }, 1000)
+    //   })
+    // }
+
+    // const bakePizza = () => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       console.log('Pizza baked!')
+    //       resolve()
+    //     }, 1000)
+    //   })
+    // }
+
+    // const addOreganoAndPack = () => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       console.log('Oregano added and packed!')
+    //       resolve()
+    //     }, 1000)
+    //   })
+    // }
+
+    // const processOrder = async () => {
+    //   await executeOrder()
+    //   await addPizzaSauce()
+    //   await addToppings()
+    //   await addFinalCheezeLayer()
+    //   await bakePizza()
+    //   await addOreganoAndPack()
+    //   console.log('The order is ready and handed over to the Zomato guy!')
+    // }
+
+    // processOrder()
   </script>
 </head>
+
 <body>
-  
+
 </body>
+
 </html>

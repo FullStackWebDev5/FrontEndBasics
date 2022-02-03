@@ -10,7 +10,7 @@
       let emailInput = document.getElementById('email-input').value
       
       /*
-        ank@gmail.co
+        ank-@gmail.co
 
         1. @ symbol should be present
         2. Atleast one character before @ symbol
@@ -18,12 +18,18 @@
         [Additional Checks] : Shouldn't have space, not special character as first character, Atleast one character after these . - _
       */
 
+      let indexOfa = emailInput.indexOf('@') // 4
+
       if(emailInput.indexOf('@') === -1)
         console.log('Email not valid - @ missing!')
       else if(emailInput.indexOf('@') < 1)
         console.log('Email not valid - Atleast one character required before @ symbol!')
       else if(emailInput.length - emailInput.lastIndexOf('.') <= 2)
         console.log('Email not valid - After dot, there should be atleast 2 characters!')
+      else if(emailInput.indexOf(' ') != -1)
+        console.log('Email not valid - Cannot contain space!')
+      else if(emailInput[indexOfa - 1] === '.' || emailInput[indexOfa - 1] === '-' || emailInput[indexOfa - 1] === '_')
+        console.log('Email not valid - Atleast one character after these . - _!')
     }
   </script>
 </head>
