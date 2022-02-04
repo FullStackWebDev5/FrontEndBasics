@@ -21,15 +21,18 @@
     // }
 
     // Constructors: Methods which are used to give initial values to the objects
-    // function Student(name, course, batch, techStack) {
-    //   this.name = name
-    //   this.course = course
-    //   this.batch = batch
-    //   this.techStack = techStack
-    // }
+    function Student(name, course, batch, techStack) {
+      this.name = name
+      this.course = course
+      this.batch = batch
+      this.techStack = techStack
+    }
 
-    // let amber = new Student('Amber', 'Course1', 'Batch1', 'MERN')
-    // let jyoti = new Student('Jyoti', 'Course1', 'Batch1', 'MERN')
+    // Prototype keyword to add properties to Object Constructors
+    Student.prototype.country = countryName
+
+    let amber = new Student('Amber', 'Course1', 'Batch1', 'MERN')
+    let jyoti = new Student('Jyoti', 'Course1', 'Batch1', 'MERN')
 
     // console.log(jyoti)
 

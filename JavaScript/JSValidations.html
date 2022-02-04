@@ -8,35 +8,69 @@
   <script>
     function validate(){
       let emailInput = document.getElementById('email-input').value
+
+      let inputInfoDisplay = document.getElementById('input-info')
       
       /*
-        ank-@gmail.co
+        ank@gmail.co
 
         1. @ symbol should be present
         2. Atleast one character before @ symbol
-        3. After dot, there should be atleast 2 characters
-        [Additional Checks] : Shouldn't have space, not special character as first character, Atleast one character after these . - _
+        3. After last dot, there should be atleast 2 characters
+        [Additional Checks] : Shouldn't have space, No special characters, capital letters or numbers as first character, Atleast one character after these . - _
       */
 
-      let indexOfa = emailInput.indexOf('@') // 4
+      let indexOfa = emailInput.indexOf('@')
+
+      let inputInfo = ''
+
+      inputInfoDisplay.style.color = 'red'
 
       if(emailInput.indexOf('@') === -1)
-        console.log('Email not valid - @ missing!')
+        inputInfo = 'Email not valid - @ missing!'
       else if(emailInput.indexOf('@') < 1)
-        console.log('Email not valid - Atleast one character required before @ symbol!')
+        inputInfo = 'Email not valid - Atleast one character required before @ symbol!'
       else if(emailInput.length - emailInput.lastIndexOf('.') <= 2)
-        console.log('Email not valid - After dot, there should be atleast 2 characters!')
+        inputInfo = 'Email not valid - After the last dot, there should be atleast 2 characters!'
       else if(emailInput.indexOf(' ') != -1)
-        console.log('Email not valid - Cannot contain space!')
+        inputInfo = 'Email not valid - Cannot contain space!'
       else if(emailInput[indexOfa - 1] === '.' || emailInput[indexOfa - 1] === '-' || emailInput[indexOfa - 1] === '_')
-        console.log('Email not valid - Atleast one character after these . - _!')
+        inputInfo = 'Email not valid - Atleast one character after these . - _!'
+      else if(emailInput.charCodeAt(0) < 97 || emailInput.charCodeAt(0) > 122)
+        inputInfo = 'Email not valid - No special characters, capital letters or numbers as first character allowed!'
+      else{
+        inputInfo = 'Valid email address'
+        inputInfoDisplay.style.color = 'green'
+      }
+      
+      inputInfoDisplay.innerText = inputInfo
     }
   </script>
+  <style>
+    span{
+      font-size: 0.7em;
+    }
+  </style>
 </head>
 <body>
-  <form onsubmit="validate()">
-    <input type='text' placeholder='Type your email address' id='email-input'>
-    <button type='submit'>Submit</button>
+  <form id='form1'>
+    <input type='text' placeholder='Type your email address' id='email-input' onchange="validate()" autocomplete="off"><br>
+    <span id='input-info'></span><br><br>
+    <button id='submit-button' type='button'>Submit</button>
   </form>
+  <script>
+    document.getElementById("form1").addEventListener("submit", function(e){
+      e.preventDefault()
+    });
+  </script>
 </body>
 </html>
+
+
+<!-- 
+  Design the JS Validation for Password Strength 
+  < 4 characters - Weak
+  > 4 and < 7 characters - Good
+  > 7 - Strong
+  [Additional Pointers are also encouraged]
+-->

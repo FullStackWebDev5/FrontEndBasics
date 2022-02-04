@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Classes</title>
+  <script>
+    /* Classes - Template for Objects */
+    // class Student {
+    //   constructor(name, course, batch, techStack){
+    //     this.name = name
+    //     this.course = course
+    //     this.batch = batch
+    //     this.techStack = techStack
+    //   }
+    // }
+
+    // let amber = new Student('Amber', 'Course1', 'Batch1', 'MERN')
+    // let jyoti = new Student('Jyoti', 'Course1', 'Batch1', 'MERN')
+    
+    class Student {
+      constructor(name, course, batch, techStack, marks1, marks2){
+        this.name = name
+        this.course = course
+        this.batch = batch
+        this.techStack = techStack
+        this.marks1 = marks1
+        this.marks2 = marks2
+      }
+
+      display() {
+        return this.name + ' is from ' + this.batch + ', learning ' + this.course + ' for ' + this.techStack + ' specialization!'
+      }
+
+      showResult(){
+        if(this.marks1 > 35)
+          console.log(this.name + ' has passed in Subject 1')
+        else
+          console.log(this.name + ' has not passed in Subject 1')
+        if(this.marks2 > 35)
+          console.log(this.name + ' has passed in Subject 2')
+        else
+          console.log(this.name + ' has not passed in Subject 2')
+      }
+    }
+
+    let amber = new Student('Amber', 'Course1', 'Batch1', 'MERN', 81, 22)
+
+    let jyoti = new Student('Jyoti', 'Course1', 'Batch1', 'MERN', 23, 76)
+
+    amber.showResult()
+    // jyoti.showResult()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
