@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Classes Continued</title>
+  <script>
+    /* CLASS INHERITANCE */
+
+    // Person | Student
+
+    /*
+      1. Student is a sub-class/ subset of Person
+      2. All Students are Persons
+      3. All Persons are not Student
+    */
+
+    // class Person {
+    //   constructor(fullName){
+    //     this.fullName = fullName
+    //   }
+    // }
+
+    // class Student extends Person{
+    //   constructor(fullName, className){
+    //     super(fullName)
+    //     this.className = className
+    //   }
+    // }
+
+    // let sita = new Person('Sita DSouza')
+
+    // let lakshman = new Student ('Lakshman Singh', '5th Standard')
+
+    // let kishan = new Student('Kishan Dewangan', '4th Year')
+
+    // console.log(kishan, lakshman, sita)
+
+    class Post {
+      constructor(title, image){
+        this.title = title
+        this.image = image
+        this.views = 0
+      }
+      increaseViewCount() {
+        this.views = this.views + 1
+      }
+
+      /* STATIC METHODS - ARE OWNED BY THE CLASS */
+      static display(){
+        console.log("I'm a static method! You cannot invoke me through an instance")
+      }
+    }
+
+    const post1 = new Post('Post1', 'image1.jpg')
+
+    post1.increaseViewCount()
+    post1.increaseViewCount()
+    post1.increaseViewCount()
+
+    const post2 = new Post('Post2', 'image2.jpg')
+
+    post2.increaseViewCount()
+    post2.increaseViewCount()
+
+    console.log(post1)
+    console.log(post2)
+
+    Post.display()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

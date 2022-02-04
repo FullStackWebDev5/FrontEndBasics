@@ -43,14 +43,25 @@
         else
           console.log(this.name + ' has not passed in Subject 2')
       }
+
+      changeTechStack(techStackToBeUpdated){
+        this.techStack = techStackToBeUpdated
+      }
     }
 
     let amber = new Student('Amber', 'Course1', 'Batch1', 'MERN', 81, 22)
 
     let jyoti = new Student('Jyoti', 'Course1', 'Batch1', 'MERN', 23, 76)
 
-    amber.showResult()
+    let sudharma = new Student('Sudharma', 'Course2', 'Batch2', 'MEAN', 78, 34)
+
+    // console.log(sudharma)
+    sudharma.changeTechStack('MERN')
+    console.log(sudharma)
     // jyoti.showResult()
+
+    // Method to fetch info from a class - Getter
+    // Method to update info in a class - Setter
   </script>
 </head>
 <body>

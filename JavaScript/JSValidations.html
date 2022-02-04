@@ -45,6 +45,24 @@
       
       inputInfoDisplay.innerText = inputInfo
     }
+
+    function checkPasswordStrength(){
+      let passwordInput = document.getElementById('password-input').value
+      let passwordInfo = document.getElementById('password-info')
+
+      if(passwordInput.length < 4){
+        passwordInfo.innerText = 'WEAK'
+        passwordInfo.style.color='red'
+      }
+      else if(passwordInput.length < 7){
+        passwordInfo.innerText = 'GOOD'
+        passwordInfo.style.color='orange'
+      }
+      else{
+        passwordInfo.innerText = 'STRONG'
+        passwordInfo.style.color='green'
+      }
+    }
   </script>
   <style>
     span{
@@ -56,6 +74,8 @@
   <form id='form1'>
     <input type='text' placeholder='Type your email address' id='email-input' onchange="validate()" autocomplete="off"><br>
     <span id='input-info'></span><br><br>
+    <input type='password' id='password-input' onkeydown="checkPasswordStrength()"><br>
+    <span id='password-info'></span><br><br>
     <button id='submit-button' type='button'>Submit</button>
   </form>
   <script>
